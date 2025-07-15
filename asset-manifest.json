@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/static/css/main.906bea85.css",
+    "main.js": "/static/js/main.e823c8ad.js",
+    "static/media/forest_image.png": "/static/media/forest_image.a124157e6280266ee806.png",
+    "static/media/mountains_image.png": "/static/media/mountains_image.3e810eef7b9b427076bc.png",
+    "static/media/skynews-sukkur-pakistan-after_5881512.png": "/static/media/skynews-sukkur-pakistan-after_5881512.59bc080ef8813a7e5701.png",
+    "static/media/Congo_basin_Sentinel_sar_1.png": "/static/media/Congo_basin_Sentinel_sar_1.a515006a5d94116a1fb5.png",
+    "static/media/nlp_Platform.png": "/static/media/nlp_Platform.e539213cfe224e822b14.png",
+    "static/media/machine_learning.png": "/static/media/machine_learning.817dd7ec161c9f56c52a.png",
+    "static/media/logo.png": "/static/media/logo.ea091584d0e437a182bf.png",
+    "static/media/main.png": "/static/media/main.ea091584d0e437a182bf.png",
+    "index.html": "/index.html",
+    "main.906bea85.css.map": "/static/css/main.906bea85.css.map",
+    "main.e823c8ad.js.map": "/static/js/main.e823c8ad.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.906bea85.css",
+    "static/js/main.e823c8ad.js"
+  ]
+}
