@@ -1,0 +1,158 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px 20px 0px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.home-text {
+  flex: 1;
+  padding: 1px 20px;
+}
+
+.home-text h2 {
+  font-size: 2rem;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.home-text p {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.key-sentence {
+  font-weight: bold;
+  font-size: 2.5rem;
+  background: linear-gradient(90deg, #46caca, #a41c9d);
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-top: -5px; /* Adjusted to reduce negative space */
+}
+
+.home-image {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  padding: 10px 20px;
+  margin: 0 auto; /* Center the image horizontally */
+  display: block; /* Ensure it is a block element to center horizontally */
+}
+
+@media (min-width: 768px) {
+  .home-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 120px;
+    padding-right: 100px;
+    position: relative;
+  }
+
+  .home-text {
+    flex: 3;
+    text-align: left;
+    padding: 10px;
+  }
+
+  .home-text h2 {
+    font-size: 36px;
+    margin-bottom: 5px;
+  }
+
+  .home-text p {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .key-sentence {
+    font-size: 60px;
+    margin-top: -10px; /* Adjusted for responsive design */
+  }
+
+  .home-image {
+    flex: 2;
+    margin: 0 auto; /* Center horizontally */
+    width: 600px;
+    max-width: 100%;
+    display: block; /* Ensure it is a block element to center horizontally */
+  }
+}
+
+
+/* .home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.home-text {
+  flex: 1;
+  padding: 20px;
+}
+
+.home-text h2 {
+  font-size: 2rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.home-text p {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.key-sentence {
+  font-weight: bold;
+  font-size: 2.5rem;
+  background: linear-gradient(90deg, #46caca, #a41c9d);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.home-image {
+  width: 100%;
+  max-width: 400px; 
+  height: auto;
+  padding: 20px;
+}
+
+@media (min-width: 768px) {
+  .home-container {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 120px;
+      padding-right: 100px;
+  }
+
+  .home-text {
+      flex: 3;
+      text-align: left;
+  }
+
+  .home-text h2 {
+      font-size: 36px; 
+  }
+
+  .home-text p {
+      font-size: 20px; 
+  }
+
+  .key-sentence {
+      font-size: 60px;
+  }
+
+  .home-image {
+      flex: 2;
+      display: flex;
+      justify-content: flex-end;
+      padding: 20px;
+      width: 200px;
+  }
+} */
