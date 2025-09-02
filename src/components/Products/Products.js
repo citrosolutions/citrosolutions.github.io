@@ -6,39 +6,135 @@ import {
   Typography,
   Grid,
   Box,
+  Container,
+  Button,
 } from "@mui/material";
 import { styled } from "@mui/system";
 import DetailedDialog from "./DetailedDialog";
 
-const CardWrapper = styled(Card)(({ theme }) => ({
-  backgroundColor: "#fff",
-  color: "#000",
-  height: "100%",
-  width: "400px",
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "space-between",
-  "&:hover": {
-    transform: "scale(1.05)",
-    transition: "transform 0.3s ease-in-out",
+const ProductSection = styled(Box)(({ theme }) => ({
+  background: "var(--background-light)",
+  padding: "80px 0",
+  position: "relative",
+  "&::before": {
+    content: '""',
+    position: "absolute",
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    background:
+      "linear-gradient(135deg, rgba(102, 126, 234, 0.02) 0%, rgba(118, 75, 162, 0.02) 100%)",
+    pointerEvents: "none",
   },
 }));
 
-const CardMediaWrapper = styled(CardMedia)(({ theme }) => ({
-  height: 200,
-  filter: "brightness(1) grayscale(0%)",
-  transition: "filter 0.3s ease-in-out",
+const SectionTitle = styled(Typography)(({ theme }) => ({
+  fontSize: "2.5rem",
+  fontWeight: 700,
+  color: "var(--text-primary)",
+  textAlign: "center",
+  marginBottom: "20px",
+  position: "relative",
+  "&::after": {
+    content: '""',
+    position: "absolute",
+    bottom: "-10px",
+    left: "50%",
+    transform: "translateX(-50%)",
+    width: "60px",
+    height: "4px",
+    background: "var(--gradient-primary)",
+    borderRadius: "2px",
+  },
 }));
 
-const CardContentWrapper = styled(CardContent)(({ theme }) => ({
+const SectionSubtitle = styled(Typography)(({ theme }) => ({
+  fontSize: "1.2rem",
+  color: "var(--text-secondary)",
+  textAlign: "center",
+  marginBottom: "60px",
+  maxWidth: "600px",
+  margin: "0 auto 60px auto",
+  lineHeight: 1.6,
+}));
+
+const ProductCard = styled(Card)(({ theme }) => ({
+  background: "var(--background-white)",
+  borderRadius: "20px",
+  height: "100%",
+  display: "flex",
+  flexDirection: "column",
+  boxShadow: "var(--shadow-md)",
+  border: "1px solid var(--border-color)",
+  overflow: "hidden",
+  transition: "all 0.3s ease",
+  cursor: "pointer",
+  position: "relative",
+  "&::before": {
+    content: '""',
+    position: "absolute",
+    top: 0,
+    left: 0,
+    right: 0,
+    height: "4px",
+    background: "var(--gradient-primary)",
+  },
+  "&:nth-of-type(2n)::before": {
+    background: "var(--gradient-secondary)",
+  },
+  "&:nth-of-type(3n)::before": {
+    background: "linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%)",
+  },
+  "&:hover": {
+    transform: "translateY(-10px)",
+    boxShadow: "var(--shadow-xl)",
+    borderColor: "var(--primary-color)",
+  },
+}));
+
+const ProductImage = styled(CardMedia)(({ theme }) => ({
+  height: 240,
+  transition: "transform 0.3s ease",
+  "&:hover": {
+    transform: "scale(1.05)",
+  },
+}));
+
+const ProductContent = styled(CardContent)(({ theme }) => ({
+  padding: "24px",
   flexGrow: 1,
+  display: "flex",
+  flexDirection: "column",
 }));
 
-const ProductContainer = styled(Box)(({ theme }) => ({
-  background: "linear-gradient(90deg, #46caca, #a41c9d)",
-  // background: "#5e1564",
-  color: "#fff",
-  padding: theme.spacing(4),
+const ProductTitle = styled(Typography)(({ theme }) => ({
+  fontSize: "1.25rem",
+  fontWeight: 600,
+  color: "var(--text-primary)",
+  marginBottom: "12px",
+  lineHeight: 1.3,
+}));
+
+const ProductDescription = styled(Typography)(({ theme }) => ({
+  color: "var(--text-secondary)",
+  lineHeight: 1.6,
+  flexGrow: 1,
+  marginBottom: "16px",
+}));
+
+const ActionButton = styled(Button)(({ theme }) => ({
+  background: "var(--gradient-primary)",
+  color: "white",
+  textTransform: "none",
+  fontWeight: 500,
+  padding: "8px 20px",
+  borderRadius: "8px",
+  alignSelf: "flex-start",
+  "&:hover": {
+    transform: "translateY(-2px)",
+    boxShadow: "var(--shadow-lg)",
+  },
 }));
 
 const products = [
@@ -117,50 +213,59 @@ const Products = () => {
   };
 
   return (
-    <ProductContainer>
-      <h1 align="center">Products</h1>
-      <Grid container spacing={4} justifyContent="center">
-        {products.map((product, index) => (
-          <Grid
-            item
-            xs={12}
-            sm={6}
-            md={4}
-            key={index}
-            display="flex"
-            justifyContent="center"
-          >
-            <CardWrapper onClick={() => handleTileClick(product)}>
-              <CardMediaWrapper
-                component="img"
-                image={product.image}
-                alt={product.title}
-              />
-              <CardContentWrapper>
-                <Typography variant="h7" component="h3" gutterBottom>
-                  {product.title}
-                </Typography>
-                <Typography variant="body2" component="p">
-                  {product.description}
-                </Typography>
-              </CardContentWrapper>
-            </CardWrapper>
-          </Grid>
-        ))}
-      </Grid>
+    <ProductSection>
+      <Container maxWidth="lg">
+        <SectionTitle variant="h2">Products</SectionTitle>
+        <SectionSubtitle variant="h6">
+          Discover our cutting-edge solutions designed to transform your
+          business operations and drive unprecedented growth through innovative
+          technology.
+        </SectionSubtitle>
 
-      {/* Modal for details */}
-      {currentProduct && (
-        <DetailedDialog
-          open={open}
-          onClose={handleClose}
-          title={currentProduct.title}
-          image={currentProduct.image}
-          description={currentProduct.description}
-          detailedInfo={currentProduct.detailedInfo}
-        />
-      )}
-    </ProductContainer>
+        <Grid container spacing={4} justifyContent="center">
+          {products.map((product, index) => (
+            <Grid
+              item
+              xs={12}
+              sm={6}
+              lg={4}
+              key={index}
+              display="flex"
+              justifyContent="center"
+            >
+              <ProductCard onClick={() => handleTileClick(product)}>
+                <ProductImage
+                  component="img"
+                  image={product.image}
+                  alt={product.title}
+                />
+                <ProductContent>
+                  <ProductTitle variant="h6">{product.title}</ProductTitle>
+                  <ProductDescription variant="body2">
+                    {product.description}
+                  </ProductDescription>
+                  <ActionButton size="small">
+                    {product.url ? "Visit Platform" : "Learn More"}
+                  </ActionButton>
+                </ProductContent>
+              </ProductCard>
+            </Grid>
+          ))}
+        </Grid>
+
+        {/* Modal for details */}
+        {currentProduct && (
+          <DetailedDialog
+            open={open}
+            onClose={handleClose}
+            title={currentProduct.title}
+            image={currentProduct.image}
+            description={currentProduct.description}
+            detailedInfo={currentProduct.detailedInfo}
+          />
+        )}
+      </Container>
+    </ProductSection>
   );
 };
 

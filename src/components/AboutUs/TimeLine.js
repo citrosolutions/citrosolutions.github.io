@@ -12,6 +12,7 @@ import BusinessIcon from "@mui/icons-material/Business";
 import TrendingUpIcon from "@mui/icons-material/TrendingUp";
 import ExpandIcon from "@mui/icons-material/Expand";
 import StarIcon from "@mui/icons-material/Star";
+import RocketLaunchIcon from "@mui/icons-material/RocketLaunch";
 
 export default function TimeLine() {
   const timelineData = [
@@ -38,6 +39,13 @@ export default function TimeLine() {
       title: "Phase Two Expansion",
       description: "New financial model for phase two expansions",
       icon: <ExpandIcon />,
+    },
+    {
+      time: "2025",
+      title: "Major Product Launches",
+      description:
+        "Released Agriculture Platform, River Analysis System & House Analyzer with real estate integration",
+      icon: <RocketLaunchIcon />,
     },
     {
       time: "Be Part Of Our Story!",

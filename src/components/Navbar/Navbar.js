@@ -29,9 +29,10 @@ export default function Navbar() {
         <ScrollLink
           to="solutions"
           smooth={true}
-          duration={500}
+          duration={300}
           className="navbar__link"
           onClick={toggleDrawer(false)}
+          offset={-100}
         >
           <ListItemText primary="Solutions" />
         </ScrollLink>
@@ -40,20 +41,34 @@ export default function Navbar() {
         <ScrollLink
           to="products"
           smooth={true}
-          duration={500}
+          duration={300}
           className="navbar__link"
           onClick={toggleDrawer(false)}
+          offset={-100}
         >
           <ListItemText primary="Products" />
         </ScrollLink>
       </ListItem>
       <ListItem className="list-item">
         <ScrollLink
-          to="about-us"
+          to="deployments"
           smooth={true}
-          duration={500}
+          duration={300}
           className="navbar__link"
           onClick={toggleDrawer(false)}
+          offset={-100}
+        >
+          <ListItemText primary="Deployments" />
+        </ScrollLink>
+      </ListItem>
+      <ListItem className="list-item">
+        <ScrollLink
+          to="about-us"
+          smooth={true}
+          duration={300}
+          className="navbar__link"
+          onClick={toggleDrawer(false)}
+          offset={-100}
         >
           <ListItemText primary="About Us" />
         </ScrollLink>
@@ -62,9 +77,10 @@ export default function Navbar() {
         <ScrollLink
           to="team"
           smooth={true}
-          duration={500}
+          duration={300}
           className="navbar__link"
           onClick={toggleDrawer(false)}
+          offset={-100}
         >
           <ListItemText primary="Team" />
         </ScrollLink>
@@ -73,9 +89,10 @@ export default function Navbar() {
         <ScrollLink
           to="contact"
           smooth={true}
-          duration={500}
+          duration={300}
           className="navbar__link"
           onClick={toggleDrawer(false)}
+          offset={-100}
         >
           <ListItemText primary="Contact" />
         </ScrollLink>
@@ -86,11 +103,15 @@ export default function Navbar() {
   return (
     <div>
       <AppBar
-        sx={{ backgroundColor: "#fff", boxShadow: "none" }}
+        sx={{
+          backgroundColor: "rgba(255, 255, 255, 0.95)",
+          boxShadow: "0 1px 2px 0 rgb(0 0 0 / 0.05)",
+          backdropFilter: "blur(20px)",
+        }}
         className="navbar"
-        position="static"
+        position="fixed"
       >
-        <Toolbar>
+        <Toolbar className="toolbar">
           {isMobile && (
             <IconButton
               size="large"
@@ -103,53 +124,69 @@ export default function Navbar() {
               <MenuIcon />
             </IconButton>
           )}
-          <ScrollLink to="/" className="navbar__link">
-            <p className="title">OeilSat</p>
+          <ScrollLink
+            to="home"
+            smooth={true}
+            duration={300}
+            className="navbar__link"
+            offset={-100}
+          >
+            <h1 className="title">OeilSat</h1>
           </ScrollLink>
           {!isMobile && (
             <div className="header__Rightlinks">
-              <ScrollLink to="solutions" smooth={true} duration={500}>
-                <Button
-                  variant="text"
-                  className="header__links"
-                  style={{ width: "125px", color: "black" }}
-                >
+              <ScrollLink
+                to="solutions"
+                smooth={true}
+                duration={300}
+                offset={-100}
+              >
+                <Button variant="text" className="header__links">
                   Solutions
                 </Button>
               </ScrollLink>
-              <ScrollLink to="products" smooth={true} duration={500}>
-                <Button
-                  variant="text"
-                  className="header__links"
-                  style={{ width: "130px", color: "black" }}
-                >
+              <ScrollLink
+                to="products"
+                smooth={true}
+                duration={300}
+                offset={-100}
+              >
+                <Button variant="text" className="header__links">
                   Products
                 </Button>
               </ScrollLink>
-              <ScrollLink to="about-us" smooth={true} duration={500}>
-                <Button
-                  variant="text"
-                  className="header__links"
-                  style={{ width: "110px", color: "black" }}
-                >
+              <ScrollLink
+                to="deployments"
+                smooth={true}
+                duration={300}
+                offset={-100}
+              >
+                <Button variant="text" className="header__links">
+                  Deployments
+                </Button>
+              </ScrollLink>
+              <ScrollLink
+                to="about-us"
+                smooth={true}
+                duration={300}
+                offset={-100}
+              >
+                <Button variant="text" className="header__links">
                   About Us
                 </Button>
               </ScrollLink>
-              <ScrollLink to="team" smooth={true} duration={500}>
-                <Button
-                  variant="text"
-                  className="header__links"
-                  style={{ width: "100px", color: "black" }}
-                >
+              <ScrollLink to="team" smooth={true} duration={300} offset={-100}>
+                <Button variant="text" className="header__links">
                   Team
                 </Button>
               </ScrollLink>
-              <ScrollLink to="contact" smooth={true} duration={500}>
-                <Button
-                  variant="text"
-                  className="header__links"
-                  style={{ width: "100px", color: "black" }}
-                >
+              <ScrollLink
+                to="contact"
+                smooth={true}
+                duration={300}
+                offset={-100}
+              >
+                <Button variant="text" className="header__links">
                   Contact
                 </Button>
               </ScrollLink>
@@ -161,9 +198,15 @@ export default function Navbar() {
         anchor="left"
         open={drawerOpen}
         onClose={toggleDrawer(false)}
-        PaperProps={{ sx: { width: "240px" } }}
+        PaperProps={{
+          sx: {
+            width: "280px",
+            backgroundColor: "#ffffff",
+            boxShadow: "0 20px 25px -5px rgb(0 0 0 / 0.1)",
+          },
+        }}
       >
-        <div>
+        <div className="drawer-header">
           <IconButton
             color="inherit"
             edge="end"

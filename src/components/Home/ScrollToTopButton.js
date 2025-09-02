@@ -32,19 +32,27 @@ const ScrollToTopButton = () => {
     <div
       style={{
         position: "fixed",
-        bottom: "80px",
-        right: "20px",
+        bottom: "30px",
+        right: "30px",
         display: isVisible ? "block" : "none",
+        zIndex: 1000,
       }}
     >
       <IconButton
         onClick={scrollToTop}
-        style={{
-          backgroundColor: "black",
+        sx={{
+          background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
           color: "white",
           borderRadius: "50%",
-          width: "50px",
-          height: "50px",
+          width: "56px",
+          height: "56px",
+          boxShadow: "0 8px 25px rgba(102, 126, 234, 0.4)",
+          transition: "all 0.3s ease",
+          "&:hover": {
+            background: "linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%)",
+            transform: "translateY(-3px)",
+            boxShadow: "0 12px 35px rgba(102, 126, 234, 0.6)",
+          },
         }}
       >
         <ArrowUpwardIcon />

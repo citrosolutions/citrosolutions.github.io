@@ -1,158 +1,359 @@
+/* Hero Section Styles */
 .home-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 5px 20px 0px 20px;
-  text-align: center;
+  min-height: 100vh;
+  padding: 120px 20px 200px; /* Increased bottom padding to prevent overlap */
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   position: relative;
+  overflow: hidden;
 }
 
-.home-text {
-  flex: 1;
-  padding: 1px 20px;
+.home-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20"><defs><radialGradient id="a" cx="50%" cy="50%"><stop offset="0%" stop-opacity=".1"/><stop offset="100%" stop-opacity="0"/></radialGradient></defs><rect width="100" height="20" fill="url(%23a)"/></svg>')
+    repeat;
+  opacity: 0.1;
+  z-index: 1;
 }
 
-.home-text h2 {
-  font-size: 2rem;
-  color: #555;
-  margin-bottom: 5px;
-}
-
-.home-text p {
-  font-size: 1.2rem;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.key-sentence {
-  font-weight: bold;
-  font-size: 2.5rem;
-  background: linear-gradient(90deg, #46caca, #a41c9d);
-  -webkit-background-clip: text;
-  color: transparent;
-  margin-top: -5px; /* Adjusted to reduce negative space */
-}
-
-.home-image {
-  width: 100%;
-  max-width: 700px;
-  height: auto;
-  padding: 10px 20px;
-  margin: 0 auto; /* Center the image horizontally */
-  display: block; /* Ensure it is a block element to center horizontally */
-}
-
-@media (min-width: 768px) {
-  .home-container {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 120px;
-    padding-right: 100px;
-    position: relative;
-  }
-
-  .home-text {
-    flex: 3;
-    text-align: left;
-    padding: 10px;
-  }
-
-  .home-text h2 {
-    font-size: 36px;
-    margin-bottom: 5px;
-  }
-
-  .home-text p {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-
-  .key-sentence {
-    font-size: 60px;
-    margin-top: -10px; /* Adjusted for responsive design */
-  }
-
-  .home-image {
-    flex: 2;
-    margin: 0 auto; /* Center horizontally */
-    width: 600px;
-    max-width: 100%;
-    display: block; /* Ensure it is a block element to center horizontally */
-  }
-}
-
-
-/* .home-container {
+.home-content {
+  position: relative;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
-  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  flex: 1;
 }
 
 .home-text {
-  flex: 1;
-  padding: 20px;
+  text-align: center;
+  color: white;
+  margin-bottom: 80px; /* Increased spacing */
+  animation: fadeInUp 0.8s ease-out;
+  z-index: 10;
+  position: relative;
 }
 
 .home-text h2 {
-  font-size: 2rem;
-  color: #555;
-  margin-bottom: 10px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 25px; /* Increased spacing */
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .home-text p {
-  font-size: 1.2rem;
-  color: #333;
+  margin: 0;
 }
 
 .key-sentence {
-  font-weight: bold;
-  font-size: 2.5rem;
-  background: linear-gradient(90deg, #46caca, #a41c9d);
+  font-weight: 800;
+  font-size: 3.5rem;
+  background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 50%, #dbeafe 100%);
   -webkit-background-clip: text;
-  color: transparent;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.1;
+  margin-bottom: 40px; /* Increased spacing */
+  display: block;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 10;
+}
+
+.home-subtitle {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 120px; /* Increased from 80px to push buttons further down */
+  max-width: 650px; /* Slightly wider */
+  line-height: 1.7; /* Better line height */
+  position: relative;
+  z-index: 10;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 25px; /* Increased gap */
+  margin-bottom: 80px; /* Increased bottom margin */
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+}
+
+.cta-primary {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  color: white;
+  padding: 18px 40px; /* Increased padding */
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  display: inline-block; /* Ensure proper display */
+}
+
+.cta-primary:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.cta-secondary {
+  background: transparent;
+  color: white;
+  padding: 18px 40px; /* Increased padding */
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  display: inline-block; /* Ensure proper display */
+}
+
+.cta-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-3px);
 }
 
 .home-image {
   width: 100%;
-  max-width: 400px; 
+  max-width: 800px;
   height: auto;
-  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 5;
 }
 
+.home-image:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+}
+
+/* Features highlight section - Better structured and contained */
+.features-highlight {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px; /* Increased gap */
+  margin-top: 0; /* Remove top margin since we have proper spacing above */
+  width: 100%;
+  max-width: 1200px; /* Constrain width */
+  position: relative;
+  z-index: 3;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(20px);
+  padding: 50px 40px; /* Increased padding */
+  border-radius: 24px; /* Larger radius */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+  margin: 0 auto; /* Center the container */
+}
+
+.feature-item {
+  text-align: center;
+  color: white;
+  animation: fadeInUp 0.8s ease-out 0.4s both;
+  padding: 20px; /* Add internal padding */
+}
+
+.feature-icon {
+  width: 70px; /* Increased size */
+  height: 70px;
+  margin: 0 auto 25px; /* Increased margin */
+  background: rgba(255, 255, 255, 0.25); /* Slightly more opaque */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px; /* Increased font size */
+  transition: all 0.3s ease;
+}
+
+.feature-icon:hover {
+  background: rgba(255, 255, 255, 0.35);
+  transform: scale(1.1);
+}
+
+.feature-item h3 {
+  font-size: 1.4rem; /* Increased font size */
+  font-weight: 600;
+  margin-bottom: 15px; /* Increased margin */
+  color: white;
+}
+
+.feature-item p {
+  color: rgba(255, 255, 255, 0.85); /* Slightly more opaque */
+  font-size: 1rem; /* Increased font size */
+  line-height: 1.6;
+}
+
+/* Spacer to push buttons down */
+.cta-spacer {
+  height: 40px;
+  width: 100%;
+}
+
+/* Enhanced button styles for more professional appearance */
+.cta-primary,
+.cta-secondary {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.cta-primary::after,
+.cta-secondary::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: all 0.6s ease;
+}
+
+.cta-primary:hover::after,
+.cta-secondary:hover::after {
+  left: 100%;
+}
+
+/* Enhanced text shadow for better readability */
+.key-sentence {
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Subtle animation for feature items */
+.feature-item {
+  transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+}
+
+/* Improved gradient for hero section */
+.home-container {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #5a4b81 100%);
+}
+
+/* Desktop Styles */
 @media (min-width: 768px) {
   .home-container {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      padding-left: 120px;
-      padding-right: 100px;
+    padding: 140px 40px 60px; /* Reduced bottom padding since features are now inline */
+  }
+
+  .home-content {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+    margin-bottom: 100px; /* Add margin to separate from features */
   }
 
   .home-text {
-      flex: 3;
-      text-align: left;
+    flex: 1;
+    text-align: left;
+    margin-bottom: 0;
+    max-width: 600px;
   }
 
   .home-text h2 {
-      font-size: 36px; 
-  }
-
-  .home-text p {
-      font-size: 20px; 
+    font-size: 1.3rem;
   }
 
   .key-sentence {
-      font-size: 60px;
+    font-size: 4.5rem;
   }
 
   .home-image {
-      flex: 2;
-      display: flex;
-      justify-content: flex-end;
-      padding: 20px;
-      width: 200px;
+    flex: 1;
+    max-width: 500px;
   }
-} */
+
+  .features-highlight {
+    position: relative; /* Changed from absolute to relative */
+    bottom: auto; /* Reset bottom positioning */
+    left: auto;
+    right: auto;
+    grid-template-columns: repeat(3, 1fr);
+    z-index: 3; /* Proper z-index */
+    margin-top: 0; /* No additional top margin */
+  }
+}
+
+@media (min-width: 1024px) {
+  .key-sentence {
+    font-size: 5rem;
+  }
+
+  .home-container {
+    padding: 160px 120px 240px; /* Even more bottom padding for larger screens */
+  }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@media (max-width: 767px) {
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-primary,
+  .cta-secondary {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .cta-spacer {
+    height: 30px;
+  }
+}
+
+.home-image {
+  animation: fadeInUp 0.8s ease-out 0.2s both, float 6s ease-in-out infinite;
+}

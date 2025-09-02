@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# OeilSat - CitroSolutions
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 🌐 Live Website
 
-## Available Scripts
+Visit our website at: **[https://citrosolutions.github.io/](https://citrosolutions.github.io/)**
 
-In the project directory, you can run:
+## 🚀 About OeilSat
 
-### `npm start`
+OeilSat is at the forefront of technological innovation, delivering cutting-edge solutions that transform industries through advanced analytics, machine learning, and real-time data processing. Our mission is to provide innovative solutions with unmatched results.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Our Core Technologies:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Real-time Flood Mapping & Prediction**
+- **Machine Learning Platforms**
+- **Blockchain & NLP Integration**
+- **Agricultural Analytics**
+- **Hydro Basin Analysis Systems**
+- **Real Estate Intelligence Platforms**
 
-### `npm test`
+## 🌍 Live Deployments
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+We have multiple production-ready platforms serving users worldwide:
 
-### `npm run build`
+- **[Sri Lanka Real Estate Platform](https://srilankahome-c2fxacaveme7f3d2.canadaeast-01.azurewebsites.net/)** - Comprehensive real estate analytics
+- **[Agricultural Analytics Platform](https://icy-plant-038eed50f.6.azurestaticapps.net/)** - Smart farming insights
+- **[Hydro Basin Analysis](https://hydro-basin-frontend-fqchcgd0a4a5esar.canadaeast-01.azurewebsites.net/)** - River network & flood prediction
+- **[House Analyzer](https://house-analyzer-platform.azurewebsites.net/)** - Comprehensive property assessment and real estate intelligence
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📞 Contact Information
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Email**: [info@oeilsat.com](mailto:info@oeilsat.com)
+- **Phone**: [+1 (443) 364-8005](tel:+14433648005)
+- **Address**: 8212 Red Gate Ct, Bowie, MD 20715, USA
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 💼 Services
 
-### `npm run eject`
+- Custom AI/ML Solutions
+- Real-time Data Analytics
+- Geospatial Intelligence
+- Weather & Climate Modeling
+- Enterprise Web Development
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🛠️ Development
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+This project is built with React and deployed using GitHub Pages.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Local Development
 
-## Learn More
+```bash
+npm install
+npm start
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The application will be available at [http://localhost:3000](http://localhost:3000)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Build for Production
 
-### Code Splitting
+```bash
+npm run build
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**© 2025 OeilSat - CitroSolutions. All rights reserved.**

@@ -1,54 +1,136 @@
+/* Professional Navbar Styles */
 .navbar {
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   display: flex;
-  padding-left: 120px;
+  padding: 0 120px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1100 !important;
+  border-bottom: 1px solid rgba(229, 231, 235, 0.3);
+  transition: all 0.3s ease;
 }
 
 .navbar .toolbar {
-  padding: 15px 15px;
+  padding: 20px 0;
+  min-height: auto;
 }
 
 .navbar .menu-icon {
-  color: rgb(60, 60, 60);
+  color: var(--text-primary);
+  transition: all 0.2s ease;
+}
+
+.navbar .menu-icon:hover {
+  color: var(--primary-color);
+  transform: scale(1.1);
 }
 
 .navbar .title {
-  margin-top: 23px;
-  font-size: 26px;
+  margin: 0;
+  font-size: 28px;
   font-weight: 800;
-  color: rgb(60, 60, 60);
+  color: var(--text-primary);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.navbar .title:hover {
+  transform: scale(1.05);
 }
 
 .header__Rightlinks {
   display: flex;
   margin-left: auto;
-  padding-right: 120px;
+  align-items: center;
+  gap: 8px;
 }
 
 .navbar__link {
   text-decoration: none !important;
+  cursor: pointer;
 }
 
-/* Responsive Design Adjustments */
-@media screen and (max-width: 768px) {
-  .navbar {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  .header__Rightlinks {
-    padding-right: 20px;
-  }
+.header__links {
+  color: var(--text-secondary) !important;
+  font-weight: 500 !important;
+  font-size: 15px !important;
+  padding: 12px 20px !important;
+  border-radius: 8px !important;
+  transition: all 0.2s ease !important;
+  text-transform: none !important;
+  min-width: auto !important;
 }
 
-@media (max-width: 600px) {
-  .navbar {
-    padding-left: 10px;
-  }
-  .header__Rightlinks {
-    display: none; /* Hide the right links on small screens */
-  }
+.header__links:hover {
+  color: var(--primary-color) !important;
+  background-color: rgba(37, 99, 235, 0.08) !important;
+  transform: translateY(-2px);
+}
+
+/* Mobile drawer styles */
+.drawer-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 16px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.list-item {
+  padding: 0 !important;
+}
+
+.list-item .navbar__link {
+  display: block;
+  width: 100%;
+  padding: 16px 24px;
+  color: var(--text-secondary);
+  font-weight: 500;
+  transition: all 0.2s ease;
 }
 
 .list-item:hover {
-  background-color: #f0f0f0;
+  background-color: rgba(37, 99, 235, 0.05);
+}
+
+.list-item:hover .navbar__link {
+  color: var(--primary-color);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 680px) {
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .navbar .title {
+    font-size: 24px;
+  }
+
+  .header__Rightlinks {
+    display: none;
+  }
+}
+
+/* Add top padding to body to account for fixed navbar */
+body {
+  padding-top: 80px;
+}
+
+/* Smooth scroll offset for fixed navbar */
+html {
+  scroll-padding-top: 100px;
 }
