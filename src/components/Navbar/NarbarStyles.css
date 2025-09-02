@@ -107,12 +107,6 @@
 /* Responsive Design */
 @media screen and (max-width: 768px) {
   .navbar {
-    padding: 0 40px;
-  }
-}
-
-@media (max-width: 680px) {
-  .navbar {
     padding: 0 20px;
   }
 
@@ -122,6 +116,16 @@
 
   .header__Rightlinks {
     display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar {
+    padding: 0 16px;
+  }
+
+  .navbar .title {
+    font-size: 20px;
   }
 }
 

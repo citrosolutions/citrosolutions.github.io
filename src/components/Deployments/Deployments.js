@@ -183,7 +183,7 @@ const deployments = [
     title: "Smart House Analyzer",
     description:
       "AI-powered house analysis system that automatically collects, processes, and analyzes property data with machine learning algorithms for real-time market updates.",
-    url: "https://srilankahome-c2fxacaveme7f3d2.canadaeast-01.azurewebsites.net/",
+    url: "https://autobuildingmapperv2-endgh9f3b3f2ages.canadaeast-01.azurewebsites.net/",
     icon: <AnalyticsIcon />,
     technologies: [
       "Machine Learning",

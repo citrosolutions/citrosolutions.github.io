@@ -152,7 +152,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 40px; /* Increased gap */
-  margin-top: 0; /* Remove top margin since we have proper spacing above */
+  margin-top: -40px; /* Move section up */
   width: 100%;
   max-width: 1200px; /* Constrain width */
   position: relative;
@@ -163,7 +163,8 @@
   border-radius: 24px; /* Larger radius */
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
-  margin: 0 auto; /* Center the container */
+  margin-left: auto; /* Center the container */
+  margin-right: auto; /* Center the container */
 }
 
 .feature-item {
@@ -206,7 +207,7 @@
 
 /* Spacer to push buttons down */
 .cta-spacer {
-  height: 40px;
+  height: 100px;
   width: 100%;
 }
 
@@ -300,7 +301,7 @@
     right: auto;
     grid-template-columns: repeat(3, 1fr);
     z-index: 3; /* Proper z-index */
-    margin-top: 0; /* No additional top margin */
+    margin-top: -60px; /* Move section up more on desktop */
   }
 }
 
@@ -350,7 +351,7 @@
   }
 
   .cta-spacer {
-    height: 30px;
+    height: 50px;
   }
 }
 

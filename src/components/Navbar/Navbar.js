@@ -17,7 +17,7 @@ import "./NarbarStyles.css";
 
 export default function Navbar() {
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const isMobile = useMediaQuery("(max-width:680px)");
+  const isMobile = useMediaQuery("(max-width:900px)");
 
   const toggleDrawer = (open) => () => {
     setDrawerOpen(open);

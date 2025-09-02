@@ -142,7 +142,7 @@ const products = [
     title: "Real-time Flood Mapping",
     description: "Flood Preparedness, Flood Relief Agencies",
     image: require("../assets/skynews-sukkur-pakistan-after_5881512.png"),
-    url: "https://riverreaches-app-dac1d9e843c0.herokuapp.com/",
+    url: "https://chhandana.users.earthengine.app/view/surfacewatercongov2",
   },
   {
     title: "Machine Learning Platform",
@@ -178,11 +178,7 @@ Data Science Consulting: Connect with our science and engineering experts to ass
     title: "Flood Prediction",
     description: "Communities At Risk, Insurance Industry",
     image: require("../assets/Congo_basin_Sentinel_sar_1.png"),
-    url: "https://zallua.com/discharge/CongoDailyData.html",
-    //     detailedInfo: `Data Science Consulting: Connect with our science and engineering experts to assess model feasibility, leverage internal and external datasets, and deliver proof-of-concept examples.
-
-    // Custom Solutions:
-    // Implement a fully operational solution that incorporates your specific requirements and leverages our platform, data, and science & engineering expertise.`,
+    url: "https://chhandana.users.earthengine.app/view/surfacewatercongov2",
   },
   {
     title: "Seasonal Weather Derivatives",
