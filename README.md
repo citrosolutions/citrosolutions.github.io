@@ -24,7 +24,7 @@ We have multiple production-ready platforms serving users worldwide:
 - **[Sri Lanka Real Estate Platform](https://srilankahome-c2fxacaveme7f3d2.canadaeast-01.azurewebsites.net/)** - Comprehensive real estate analytics
 - **[Agricultural Analytics Platform](https://icy-plant-038eed50f.6.azurestaticapps.net/)** - Smart farming insights
 - **[Hydro Basin Analysis](https://hydro-basin-frontend-fqchcgd0a4a5esar.canadaeast-01.azurewebsites.net/)** - River network & flood prediction
-- **[House Analyzer](https://house-analyzer-platform.azurewebsites.net/)** - Comprehensive property assessment and real estate intelligence
+- **[House Analyzer](https://autobuildingmapperv2-endgh9f3b3f2ages.canadaeast-01.azurewebsites.net/)** - Comprehensive property assessment and real estate intelligence
 
 ## 📞 Contact Information
 
